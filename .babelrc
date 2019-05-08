@@ -1,8 +1,9 @@
 {
   "presets": [
-    "next/babel"
+    "next/babel",
+    "linaria/babel"
   ],
   "plugins": [
-    "transform-flow-strip-types"
+    "transform-optional-chaining"
   ]
 }
