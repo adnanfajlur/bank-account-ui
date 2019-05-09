@@ -121,7 +121,6 @@ class Home extends Component {
 
   handleDelete = (key) => {
     const { data } = this.state
-    console.log('snp', key)
     this.handleChangeData({ data: data.filter((n, index) => index !== key) })
   }
 
