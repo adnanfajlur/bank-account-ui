@@ -8,7 +8,7 @@ module.exports = withCSS({
         {
           loader: 'linaria/loader',
           options: {
-            sourceMap: process.env.NODE_ENV !== 'production',
+            sourceMap: process.env.NODE_ENV !== 'production'
           },
         },
       ],

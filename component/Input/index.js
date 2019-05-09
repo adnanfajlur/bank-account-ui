@@ -8,17 +8,7 @@ import PropTypes from 'prop-types'
 import { css } from 'linaria'
 import { styled } from 'linaria/react'
 import cn from 'classnames'
-
-const theme = {
-  borderRadius: '4px',
-  backgroundColor: '#FFF',
-  foregroundColor: '#494949',
-  primaryColor: '#03a9f4',
-  accent1Color: '#8bc34a',
-  accent2Color: '#f44336',
-  neutralShade1: '#f2f2f2',
-  neutralShade2: '#d1d3d4',
-}
+import theme from '../theme'
 
 const Root = styled.div`
   display: block;
@@ -32,7 +22,7 @@ const LabelForm = styled.div`
 const styles = {
   inputForm: css`
     box-sizing: border-box;
-    padding: 0 12px;
+    padding: 4px 12px;
     width: 100%;
     height: 42px;
     border: 2px solid ${theme.neutralShade2};
@@ -52,6 +42,7 @@ const styles = {
   `,
   textArea: css`
     min-height: 80px;
+    resize: none;
   `,
   select: css`
     cursor: pointer;
@@ -70,6 +61,15 @@ const styles = {
   `,
   inputDefault: css`
     border-color: ${theme.neutralShade2};
+  `,
+  helperSuccess: css`
+    color: ${theme.accent1Color};
+  `,
+  helperError: css`
+    color: ${theme.accent2Color};
+  `,
+  helperDefault: css`
+    color: ${theme.neutralShade2};
   `,
 }
 

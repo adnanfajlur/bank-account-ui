@@ -2,13 +2,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { styled } from 'linaria/react'
+import theme from '../theme'
 
 const Root = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-height: 64px;
-  background: #49beb7;
+  background: ${theme.primaryColor};
   color: #fefefe;
   border-radius: 8px;
   padding: 0 32px;
@@ -18,7 +19,7 @@ const ButtonIcon = styled.i`
   border-radius: 50px;
   &:hover {
     cursor: pointer;
-    background: #3ca9a3;
+    background: ${theme.primaryShade1};
   }
 `
 

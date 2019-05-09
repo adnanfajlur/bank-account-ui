@@ -39,6 +39,7 @@ class AutoComplete extends Component {
       <Input {...args} select>
         {loading && <option>Loading...</option>}
         {!loading && !options && <option>Data not found</option>}
+        {!loading && options && <option value="">None</option>}
         {!loading && options && dataConfig(options).map((item, key) => (
           <option value={item.value} key={key}>{item.label}</option>
         ))}
