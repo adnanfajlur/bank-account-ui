@@ -41,8 +41,9 @@ const Wrapper = styled.div`
   width: 100%;
   > div {
     margin-bottom: 24px;
-    width: calc((100% - 54px) / 3);
+    min-width: 260px;
     margin-right: 18px;
+    flex: 1;
   }
 `
 const ButtonActionWrapper = styled.div`
@@ -182,7 +183,6 @@ class Form extends Component {
                     helper={touched.currency && errors.currency}
                     onBlur={handleBlur}
                     label="Currency*"
-                    minWidth="260px"
                     url="https://restcountries.eu/rest/v2/all"
                     dataConfig={this.handleDataConfig}
                   />

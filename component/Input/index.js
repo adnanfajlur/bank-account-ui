@@ -85,10 +85,10 @@ const getColor = (name, el = 'input') => {
 }
 
 const Input = ({
-  label, helper, style, minWidth, variant, textarea, select, children, ...args
+  label, helper, style, variant, textarea, select, children, ...args
 }) => {
   return (
-    <Root style={{ minWidth, ...style }}>
+    <Root style={{ ...style }}>
       {label && <LabelForm>{label}</LabelForm>}
       {textarea && (
         <textarea className={cn(styles.inputForm, styles.textArea, getColor(variant, 'input'))} {...args} />
@@ -109,14 +109,12 @@ const Input = ({
 Input.defaultProps = {
   textarea: false,
   select: false,
-  minWidth: '280px',
 }
 
 Input.propTypes = {
   variant: PropTypes.string,
   label: PropTypes.string,
   helper: PropTypes.string,
-  minWidth: PropTypes.string,
   style: PropTypes.object,
   textarea: PropTypes.bool,
   select: PropTypes.bool,
