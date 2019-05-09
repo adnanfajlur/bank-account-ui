@@ -28,6 +28,9 @@ const Body = styled.div`
   background: #fefefe;
   min-height: 320px;
   padding: 12px 32px;
+  @media (max-width: 620px) {
+    padding: 12px;
+  }
 `
 const FormWrapper = styled.form`
   display: flex;
@@ -44,6 +47,10 @@ const Wrapper = styled.div`
     min-width: 260px;
     margin-right: 18px;
     flex: 1;
+    @media (max-width: 620px) {
+      min-width: unset;
+      flex: 1 100%;
+    }
   }
 `
 const ButtonActionWrapper = styled.div`

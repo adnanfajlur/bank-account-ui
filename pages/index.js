@@ -41,14 +41,22 @@ const TableCard = styled.div`
   &::-webkit-scrollbar-thumb {
     box-shadow: inset 0px 9px 0px 0px ${theme.primaryShade2};
     border: solid 6px transparent;
-}
+  }
+  @media (max-width: 620px) {
+    margin: 12px;
   }
 `
 const HeaderCard = styled.div`
   margin: 12px 32px;
+  @media (max-width: 620px) {
+    margin: 12px;
+  }
 `
 const FormCard = styled.div`
   margin: 12px 32px;
+  @media (max-width: 620px) {
+    margin: 12px;
+  }
 `
 
 const configTable = [
