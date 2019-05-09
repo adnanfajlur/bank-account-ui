@@ -9,4 +9,5 @@
  - PWA
  - Firebase Hosting
 
+https://bank-account-ui.firebaseapp.com
 ```
