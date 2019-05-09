@@ -60,6 +60,7 @@ const configTable = [
   { key: 'city', title: 'City' },
   { key: 'country', title: 'Country' },
   { key: 'type', title: 'Type' },
+  { key: 'currency', title: 'Currency' },
 ]
 
 const initData = length => Array.from(Array(length).keys()).map(() => ({
@@ -73,6 +74,7 @@ const initData = length => Array.from(Array(length).keys()).map(() => ({
   city: faker.address.city(),
   country: faker.address.country(),
   type: faker.random.arrayElement(['individual', 'company']),
+  currency: 'IDR',
 }))
 
 class Home extends Component {
