@@ -105,7 +105,7 @@ class Home extends Component {
   handleSubmit = async (values) => {
     const { data, dataUpdate } = this.state
     this.setState({ section: 'table', dataUpdate: null })
-    if (dataUpdate) {
+    if (typeof dataUpdate === 'number') {
       const updatedData = data
       updatedData[dataUpdate] = values
       this.handleChangeData({ data: updatedData })

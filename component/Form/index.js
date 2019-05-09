@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -79,14 +80,16 @@ class Form extends Component {
   }
 
   render() {
+    const { dataUpdate } = this.props
     return (
       <Root>
         <Head>Create Account</Head>
         <Body>
           <Formik
-            initialValues={initialValues}
+            initialValues={dataUpdate || initialValues}
             onSubmit={this.handleSubmit}
             validationSchema={validationSchema}
+            enableReinitialize
           >
             {({
               values, handleChange, handleSubmit, isSubmitting, handleBlur, errors, touched,
@@ -144,7 +147,6 @@ class Form extends Component {
                   </Wrapper>
                 )}
                 <Wrapper>
-                  {console.log('snp', errors)}
                   <Input
                     name="accountHolderName"
                     value={values.accountHolderName}
@@ -229,6 +231,7 @@ class Form extends Component {
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  dataUpdate: PropTypes.any,
 }
 
 export default Form
