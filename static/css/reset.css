@@ -25,6 +25,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	font-family: 'Ubuntu', sans-serif;
+	font-display: auto;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

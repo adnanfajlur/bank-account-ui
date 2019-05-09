@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "firebase deploy"
+    "deploy": "yarn build && yarn export && firebase deploy"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -19,6 +19,7 @@
     "formik": "^1.5.4",
     "linaria": "^1.3.1",
     "next": "^8.1.0",
+    "next-offline": "^3.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

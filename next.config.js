@@ -1,6 +1,7 @@
+const withOffline = require('next-offline')
 const withCSS = require('@zeit/next-css')
 
-module.exports = withCSS({
+module.exports = withOffline(withCSS({
   webpack(config) {
     config.module.rules.push({
       test: /\.js$/,
@@ -21,4 +22,4 @@ module.exports = withCSS({
       '/': { page: '/' },
     }
   },
-})
+}))

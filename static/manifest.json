@@ -1,0 +1,42 @@
+{
+  "name": "Bank Account UI",
+  "sort_name": "Bank Account",
+  "description": "This sample website that used for test",
+  "background_color": "#ececec",
+  "theme_color": "#49beb7",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/png/bank.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-return */
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react'
+import Head from 'next/head'
 import { styled } from 'linaria/react'
 import faker from 'faker'
 import Table from '../component/Table'
@@ -135,31 +136,36 @@ class Home extends Component {
   render() {
     const { data, section, dataUpdate } = this.state
     return (
-      <Root>
-        <Container>
-          <HeaderCard>
-            <Header onChange={e => this.setState({ section: e })}>tes</Header>
-          </HeaderCard>
-          {section === 'table' && (
-            <TableCard>
-              <Table
-                config={configTable}
-                data={this.handleMappingData(data)}
-                triggerUpdate={this.handleUpdate}
-                triggerDelete={this.handleDelete}
-              />
-            </TableCard>
-          )}
-          {section === 'form' && (
-            <FormCard>
-              <Form
-                onSubmit={this.handleSubmit}
-                dataUpdate={data[dataUpdate]}
-              />
-            </FormCard>
-          )}
-        </Container>
-      </Root>
+      <>
+        <Head>
+          <title>Bank Account UI</title>
+        </Head>
+        <Root>
+          <Container>
+            <HeaderCard>
+              <Header onChange={e => this.setState({ section: e })}>tes</Header>
+            </HeaderCard>
+            {section === 'table' && (
+              <TableCard>
+                <Table
+                  config={configTable}
+                  data={this.handleMappingData(data)}
+                  triggerUpdate={this.handleUpdate}
+                  triggerDelete={this.handleDelete}
+                />
+              </TableCard>
+            )}
+            {section === 'form' && (
+              <FormCard>
+                <Form
+                  onSubmit={this.handleSubmit}
+                  dataUpdate={data[dataUpdate]}
+                />
+              </FormCard>
+            )}
+          </Container>
+        </Root>
+      </>
     )
   }
 }
